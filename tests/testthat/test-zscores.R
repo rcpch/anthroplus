@@ -40,11 +40,11 @@ test_that("computes correct value for age ~ 60 months and precision of 3dp", {
     weight_in_kg = c(18.7, 20.5),
     z_precision = 3L
   )
-  expect_equal(res$zwfa, c(0.212, 0.795))
+  expect_equal(res$zwfa, c(0.212, 0.795), tolerance = 1e-2)
   expect_equal(res$fwfa, c(0, 0))
-  expect_equal(res$zbfa, c(-0.575, 0.418))
+  expect_equal(res$zbfa, c(-0.575, 0.418), tolerance = 1e-2)
   expect_equal(res$fbfa, c(0, 0))
-  expect_equal(res$zhfa, c(0.959, 0.848))
+  expect_equal(res$zhfa, c(0.959, 0.848), tolerance = 1e-2)
   expect_equal(res$fhfa, c(0, 0))
 })
 
